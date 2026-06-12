@@ -185,4 +185,25 @@ article .excerpt {
         font-size: 12px;
         padding: 0 8px;
     }
+    .figure-row {
+        flex-direction: column;
+    }
+}
+
+/* 10. Figures côte à côte */
+.figure-row {
+    display: flex;
+    gap: 20px;
+    margin: 50px 0;
+    flex-wrap: wrap;
+}
+.figure-row figure {
+    flex: 1;
+    min-width: 200px;
+    margin: 0;
+}
+.figure-row img {
+    max-height: 280px;
+    width: auto;
+    margin: 0 auto;
 }
