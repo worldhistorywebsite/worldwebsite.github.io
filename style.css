@@ -5,7 +5,6 @@
     --gray: #757575; 
     --bg-color: #f4f1ea; /* Ton beige pastel historique */
 }
-
 /* 2. Base de la page */
 body { 
     font-family: 'Inter', sans-serif; 
@@ -15,20 +14,17 @@ body {
     line-height: 1.6; 
     -webkit-font-smoothing: antialiased; /* Rend la police plus fine sur Mac/iOS */
 }
-
 .container { 
     max-width: 680px; 
     margin: 0 auto; 
     padding: 0 20px; 
 }
-
 /* 3. Header & Navigation */
 header { 
     padding: 30px 0; 
     border-bottom: 1px solid rgba(0,0,0,0.05); 
     margin-bottom: 60px; 
 }
-
 .logo { 
     font-family: 'Inter', sans-serif;
     font-weight: 800; 
@@ -38,7 +34,6 @@ header {
     color: var(--main-color);
     font-size: 22px;
 }
-
 /* 4. Typographie des articles */
 h1 { 
     font-family: 'Lora', serif; 
@@ -49,7 +44,6 @@ h1 {
     margin-bottom: 15px;
     color: var(--main-color);
 }
-
 .meta { 
     text-transform: uppercase; 
     letter-spacing: 0.12em; 
@@ -58,14 +52,12 @@ h1 {
     color: var(--gray);
     margin-bottom: 25px;
 }
-
 .post-content p {
     font-family: 'Lora', serif;
     font-size: 20px;
     margin-bottom: 25px;
     color: #333;
 }
-
 /* 5. Éléments interactifs & Newsletter */
 .newsletter { 
     background: #ffffff; 
@@ -76,7 +68,6 @@ h1 {
     box-shadow: 0 20px 40px rgba(0,0,0,0.02);
     text-align: center;
 }
-
 input[type="email"] { 
     padding: 12px 15px; 
     width: 60%; 
@@ -85,7 +76,6 @@ input[type="email"] {
     margin-bottom: 10px;
     font-family: 'Inter', sans-serif;
 }
-
 button { 
     background: var(--main-color); 
     color: white;
@@ -96,14 +86,103 @@ button {
     cursor: pointer;
     transition: all 0.2s ease;
 }
-
 button:hover {
     background: #000;
     transform: scale(1.05); /* Petit effet de zoom au survol */
 }
-
 hr {
     border: 0;
     border-top: 1px solid rgba(0,0,0,0.1);
     margin: 60px 0;
+}
+
+/* 6. Figures et images d'article */
+figure {
+    margin: 50px 0;
+    text-align: center;
+}
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+}
+figcaption {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: var(--gray);
+    margin-top: 12px;
+    font-style: italic;
+    letter-spacing: 0.01em;
+}
+
+/* 7. Titres de section dans l'article */
+h2 {
+    font-family: 'Lora', serif;
+    font-size: 32px;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    color: var(--main-color);
+}
+h3 {
+    font-family: 'Lora', serif;
+    font-size: 24px;
+    line-height: 1.3;
+    margin-top: 45px;
+    margin-bottom: 18px;
+    color: var(--main-color);
+}
+
+/* 8. Paragraphes de l'article (hors .post-content) */
+article p {
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: #333;
+}
+article .excerpt {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: var(--gray);
+    margin-bottom: 25px;
+}
+
+/* 9. Responsive - Mobile */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 32px;
+    }
+    h2 {
+        font-size: 24px;
+        margin-top: 40px;
+    }
+    h3 {
+        font-size: 20px;
+        margin-top: 32px;
+    }
+    article p,
+    .post-content p {
+        font-size: 17px;
+    }
+    .container {
+        padding: 0 16px;
+    }
+    .newsletter {
+        padding: 30px 20px;
+        margin: 50px 0;
+    }
+    input[type="email"] {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    figure {
+        margin: 35px 0;
+    }
+    figcaption {
+        font-size: 12px;
+        padding: 0 8px;
+    }
 }
